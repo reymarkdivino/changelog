@@ -1,5 +1,134 @@
 # changelog
 
+# 0.0.10 (November 6th, 2018)
+
+## Updated/Fixed
+
+Fixed formatting for `program report` when in read-mode.
+
+## Security
+
+Made `invitation` codes single-use to prevent limit bypass.  
+_☆ reported by reymarkdivino_
+
+Addressed homograph attack vulnerability.   
+_☆ reported by reymarkdivino_
+
+Remediated open redirect weakness.   
+_☆ reported by ali_
+
+## Known Issues
+
+A notification email indicating your `password` has been changed is triggered when any `user settings` are updated.
+
+Hyperlinks missing protocol in the url do not resolve to external website.
+
+The `program report` editing experience can be improved.
+
+The `reward` interface can be improved.
+
+# 0.0.9 (October 24th, 2018)
+
+## New
+
+Added pagination to `/researchers` page.
+
+Added field to select number of items displayed on `/researchers` page.
+
+Added URL persistence through sign-in for authenticated routes.
+
+Added container overflow control for `description` section of report content.
+
+## Updated/Fixed
+
+Changed copy in various components and modules to improve UX.
+
+Fixed form interaction and `update` notifications in `/programs` editor.
+
+Improved responsive design of report pages on mobile devices.
+
+Addressed report `activity` logging bug that occasionally posted incorrect action.
+
+Fixed `gravatar` displayed for awarder of bounty in `activity` log of a report.
+
+Updated program invite-related mailers with minor copyedits.
+
+Switched mailers to send from `team@federacy.com` for better support handling.
+
+## Removed
+
+Removed `Create Program` button from the UI for researchers.
+
+Removed `/network` page access for `inactive` users.
+
+Removed firing of notification mailers for a program's auto-generated example report.
+
+## Known Issues
+
+A notification email indicating your `password` has been changed is triggered when any `user settings` are updated.
+
+The `reward` interface can be improved.
+
+# 0.0.8 (October 11th, 2018)
+
+## New
+
+![Screenshot](/images/profile-editor-0.0.8.png)
+
+Added section to the `/profile` editor below `user settings`  for researchers to complete.
+
+Added `/billing` page with subscription plans.
+
+Added public `/researchers` list for subscribers with `search` and `filter` functionality.
+
+Added public researcher profiles accessible from `/researchers` list for subscribers.
+
+Added ability to `invite` a researcher to your `/program` from `/researchers` list and their corresponding profile page.
+
+![Screenshot](/images/researcher-profile-0.0.8.png)
+
+## Updated/Fixed
+
+Fixed `/network` table styling.
+
+Renamed `visibility` field in `/profile` editor to clarify its function.
+
+Moved `visibility` toggle from `user settings` to `researcher profile` section of `/profile` editor.
+
+Updated `users` endpoint to include connected `users` through `programs` and `reports`.
+
+Fixed missing `user activation` mailers.
+
+Redesigned layout and styling for individual `reports`.
+
+Moved `Award` section to `Reward` action that opens a modal in individual `reports`.
+
+Merged the `comment` system into a single module in individual `reports`.
+
+Combined the submitted report and program's report into a single panel that is switchable via link.
+
+Renamed `Timeline` to `Activity` in individual `reports`.
+
+![Screenshot](/images/report-view-0.0.8.png)
+
+## Removed
+
+Removed `role.gravatar` from `api/roles`.
+
+Removed ability for `inactive users` to send invitations through the `/network` page.
+
+Removed ability for `inactive users` to make their profile `public`.
+
+Removed ability for researchers to `create programs`.
+
+Removed `priority` selection from individual `reports`.
+
+## Known Issues
+
+A notification email indicating your `password` has been changed is triggered when any `user settings` are updated.
+
+The `reward` user interface can be improved and does not account for `swag` rewards.
+
 # 0.0.7 (September 16th, 2018)
 
 ## New
